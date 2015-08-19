@@ -1,0 +1,19 @@
+#member_list
+  %h1 职员信息列表
+  %div
+    - @members.each do |member|
+      %span
+        姓名:
+        = member.name
+        身份证号:
+        = member.shen_fen_zheng
+        手机号:
+        = member.tel
+        = member.id
+        所属小组:
+        = member.teams
+      %h4.list_action
+        = link_to '查看信息', "/companies/#{@company_id}/members/#{member.id}", :method => :get, :class => "show"
+        = link_to '修改信息', "/companies/#{@company_id}/members/#{member.id}/edit", :method => :get, :class => "update"
+        = link_to '删除', "/companies/#{@company_id}/members/#{member.id}", :confirm => 'Are you sure?', :method => :delete, :class => "delete"
+  = link_to '添加信息', "/companies/#{@company_id}/members/new", :method => :get

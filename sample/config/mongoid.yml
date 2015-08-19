@@ -1,0 +1,12 @@
+development:
+  sessions:
+    default:
+      database: company_info_dev
+      hosts:
+        - localhost:27017
+test:
+  sessions:
+    default:
+      database: company_info_test
+      hosts:
+        - localhost:27017

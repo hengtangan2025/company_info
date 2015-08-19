@@ -1,0 +1,7 @@
+#member_edit
+  = simple_form_for [@company,@member], :method => :put do |f|
+    = f.input 'shen_fen_zheng'
+    = f.input 'name'
+    = f.input 'tel'
+    = f.association :teams, label_method: :team_name, as: :check_boxes
+    = f.submit '确定'
