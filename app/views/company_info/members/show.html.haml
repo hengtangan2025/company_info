@@ -5,4 +5,6 @@
   = @member.name
   手机号:
   = @member.tel
-  = @member.id
+  所属小组:
+  - @member.team_ids.each  do |t|
+    = Team.find(t).team_name

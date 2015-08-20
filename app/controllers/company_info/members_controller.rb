@@ -1,5 +1,5 @@
 module CompanyInfo
-  class CompanyInfo::MembersController < ApplicationController
+  class MembersController < ApplicationController
     before_action :find_company
 
     def index

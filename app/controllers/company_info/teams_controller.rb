@@ -1,5 +1,5 @@
 module CompanyInfo
-  class CompanyInfo::TeamsController < ApplicationController
+  class TeamsController < ApplicationController
     before_action :find_company
     def index
       @teams = @company.teams.all
